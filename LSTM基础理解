@@ -1,1 +1,9 @@
-
+1. LSTM总共有7个参数
+2. 必须输入的是：input_size;hidden_size;num_layers
+(1)input_size: 输入特征维数，即每一行输入元素的个数。输入是一维向量。如：[1,2,3,4,5,6,7,8,9]，input_size 就是9
+(2)hidden_size: 隐藏层状态的维数，即隐藏层节点的个数
+(3)num_layers: LSTM 堆叠的层数，默认值是1层
+3.bias: 隐层状态是否带bias，默认为true。bias是偏置值，或者偏移值
+4.batch_first:输入输出的第一维是否为 batch_size，默认值 False。input 默认是(4,1,5)，中间的 1 是 batch_size，指定batch_first=True后就是(1,4,5)。所以，如果你的输入数据是二维数据的话，就应该将 batch_first 设置为True
+5.dropout: 默认值0。是否在除最后一个 RNN 层外的其他 RNN 层后面加 dropout 层。输入值是 0-1 之间的小数，表示概率。0表示0概率dripout，即不dropout
+6.bidirectional: 是否是双向 RNN，默认为：false，若为 true，则：num_directions=2，否则为1。
