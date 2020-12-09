@@ -1,10 +1,10 @@
 # python2.7
 import torch 
 import torch.nn as nn
-from torch.autograd import Variable
+from torch.autograd import Variable #autograd包为基于tensor的的所有操作提供自动微分的功能。Variable记录tensor的多少和流向。
 import torch.nn.functional as F
 import torch.utils.data
-import torch.optim as optim
+import torch.optim as optim  #torch.optim是一个实现了各种优化算法的库
 
 from tensorboardX import SummaryWriter
 
